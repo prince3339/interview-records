@@ -3,10 +3,10 @@
 Save interview records to local storage
 
 ## Demo
-* [Interview Records](https://task-manager-intellij.herokuapp.com/index.html#!/)
+* [Interview Records](https://interview-records.herokuapp.com/index.html#!/)
 
 ## Code explanation
-* [Documentation](http://task-manager-intellij.herokuapp.com/doc/index.html)
+* [Documentation](https://interview-records.herokuapp.com/doc/index.html)
 
 ## Getting Started
 
@@ -33,8 +33,13 @@ Then got it interview-records-master (Probaly it's your downloaded file's name)]
 2. Open your command prompt/terminal and run *npm install* command. 
 This will install all the dependency files for this project
 
-3. Now run  *npm start*
+3.Run *npm run build* for development 
+
+4. Now run  *npm start*
 After a while you will see the app is up and running on http://localhost:8080
+
+5. Run *npm run prod* for production deployment
+
 ```
 
 ## Built With
