@@ -1,0 +1,30 @@
+a {
+    color: map-deep-get($colors, "list", "orange");
+
+    text-decoration: none;
+
+    transition: color 0.2s linear 0.1s;
+
+    &:hover {
+        color: map-deep-get($colors, "list", "orange");
+
+        opacity: 0.70;
+        transition: color 0.2s linear 0.1s;
+    }
+
+    &:active {
+      color: map-deep-get($colors, "list", "orange");
+    
+      opacity: 0.70;
+      transition: color 0.2s linear 0.1s;
+    }
+
+    &:focus {
+        color: map-deep-get($colors, "list", "orange");
+        outline: 0;
+        text-decoration: none !important;
+
+        opacity: 0.70;
+        transition: color 0.2s linear 0.1s;
+    }
+}

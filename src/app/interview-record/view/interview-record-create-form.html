@@ -1,0 +1,227 @@
+<section class="interview">   
+    <div class="interview__form">
+        <a ui-sref="interview-list">Interview list &gt;</a>
+        <form class="recordsure__form"
+              form-style 
+              type=vm.interview.purpose 
+              name="interviewCreateForm" 
+              ng-submit="vm.saveInterviewRecord()" 
+              novalidate>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="purpose"
+                           class="recordsure__form__label">Interview purpose</label>
+                    <span ng-if="interviewCreateForm.purpose.$touched" ng-messages="interviewCreateForm.purpose.$error" role="alert">
+                        <span class="recordsure__form__error" 
+                              ng-message="required">Required</span>
+                    </span>
+                </div>
+                <select class="recordsure__form__fields"
+                        id="purpose" 
+                        name="purpose" 
+                        ng-model="vm.interview.purpose" 
+                        required>
+                    <option value="Visa">
+                        Visa
+                    </option>
+                    <option value="Permanent residence">
+                        Permanent residence
+                    </option>
+                </select>
+            </div>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="city"
+                           class="recordsure__form__label">City</label>  
+                    <span ng-if="interviewCreateForm.city.$touched" ng-messages="interviewCreateForm.city.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                    </span>   
+                    
+                    <span ng-if="interviewCreateForm.other_city.$touched" ng-messages="interviewCreateForm.other_city.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                    </span>           
+                </div>
+                <select class="recordsure__form__fields interview__form__field"
+                        id="city" 
+                        name="city" 
+                        ng-model="vm.interview.city" 
+                        required>
+                    <option valuef="London">
+                        London
+                    </option>
+                    <option value="Brighton">
+                        Brighton
+                    </option>
+                    <option value="Belfast">
+                        Belfast
+                    </option>
+                    <option value="Cardiff">
+                        Cardiff
+                    </option>
+                    <option value="Newcastle">
+                        Newcastle
+                    </option>
+                    <option value="Elsewhere">
+                        Elsewhere
+                    </option>
+                </select>
+                <div>
+                    <input class="recordsure__form__fields"
+                        ng-if="vm.interview.city === 'Elsewhere'" 
+                        type="text" 
+                        name="other_city" 
+                        placeholder="Please specify" 
+                        ng-model="vm.interview.other_city" 
+                        autocomplete="off" 
+                        required>
+                </div>
+            </div>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="address"
+                           class="recordsure__form__label">Address</label>
+                    <span ng-if="interviewCreateForm.address.$touched" ng-messages="interviewCreateForm.address.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                    </span>
+                </div>
+                <input class="recordsure__form__fields"
+                    id="address" 
+                    type="text" 
+                    name="address" 
+                    ng-model="vm.interview.address" 
+                    autocomplete="off" 
+                    required>
+            </div>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="interviewer"
+                           class="recordsure__form__label">Interviewer</label>
+                    <span ng-if="interviewCreateForm.interviewer.$touched" ng-messages="interviewCreateForm.interviewer.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                    </span>
+                </div>
+                <input class="recordsure__form__fields"
+                    id="interviewer" 
+                    type="text" 
+                    name="interviewer" 
+                    ng-model="vm.interview.interviewer" 
+                    autocomplete="off" 
+                    required>
+
+            </div>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="interviewee"
+                           class="recordsure__form__label">Interviewee</label>
+                    <span ng-if="interviewCreateForm.interviewee.$touched" ng-messages="interviewCreateForm.interviewee.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                    </span>
+                </div>
+                <input class="recordsure__form__fields" 
+                    id="interviewee" 
+                    type="text" 
+                    name="interviewee" 
+                    ng-model="vm.interview.interviewee" 
+                    autocomplete="off" 
+                    required>
+            </div>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="interviewee_email"
+                           class="recordsure__form__label">Interviewee's email</label>
+                    <span ng-if="interviewCreateForm.interviewee_email.$touched" ng-messages="interviewCreateForm.interviewee_email.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                        <span class="recordsure__form__error"
+                              ng-message="pattern">Email address not valid</span>
+                    </span>
+                </div>
+
+                <input class="recordsure__form__fields" 
+                    id="interviewee_email" 
+                    type="email" 
+                    name="interviewee_email" 
+                    ng-model="vm.interview.interviewee_email" 
+                    ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" 
+                    autocomplete="off" 
+                    required>
+            </div>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="interviewee_phone"
+                           class="recordsure__form__label">Phone number</label>
+                    <span ng-if="interviewCreateForm.interviewee_phone.$touched" ng-messages="interviewCreateForm.interviewee_phone.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                        <span class="recordsure__form__error"
+                              ng-message="pattern">Phone no. format ###-###-####</span>
+                    </span>
+                </div>
+                <input class="recordsure__form__fields" 
+                    id="interviewee_phone" 
+                    type="text" 
+                    name="interviewee_phone" 
+                    ng-model="vm.interview.interviewee_phone" 
+                    pattern="(\d{3})-(\d{3})-(\d{4})" 
+                    autocomplete="off" 
+                    required>
+            </div>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="interview_date"
+                           class="recordsure__form__label">Date</label>
+                    <span ng-if="interviewCreateForm.interview_date.$touched" ng-messages="interviewCreateForm.interview_date.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                    </span>
+                </div>
+                <input class="recordsure__form__fields" 
+                    id="interview_date" 
+                    type="date" 
+                    name="interview_date" 
+                    ng-model="vm.interview.interview_date" 
+                    autocomplete="off" 
+                    required>
+            </div>
+            <div class="interview__form__field">
+                <div class="layout-row layout-align-space-between-start">
+                    <label for="interview_id"
+                           class="recordsure__form__label">Unique Interview ID</label>
+                    <span ng-if="interviewCreateForm.interview_id.$touched" ng-messages="interviewCreateForm.interview_id.$error" role="alert">
+                        <span class="recordsure__form__error"
+                              ng-message="required">Required</span>
+                    </span>
+                </div>
+                <div class="layout-row">
+                    <input class="recordsure__form__fields flex" 
+                        id="interview_id" 
+                        type="text" 
+                        readonly 
+                        name="interview_id" 
+                        ng-model="vm.interview.interview_id" 
+                        autocomplete="off" 
+                        required>
+
+                    <button class="recordsure-btn"
+                            type="button" 
+                            aria-label="random id generator" 
+                            ng-click="vm.generateID()">
+                        Generate ID    
+                    </button>
+                </div>
+            </div>
+            <div class="layout-row layout-align-end-center">
+                <input class="recordsure-btn"
+                   ng-disabled="interviewCreateForm.$invalid" 
+                   type="submit" 
+                   aria-label="Save Interview" 
+                   value="Save record " />
+            </div>
+        </form>
+    </div>
+</section>

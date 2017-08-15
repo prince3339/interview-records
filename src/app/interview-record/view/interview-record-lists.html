@@ -1,0 +1,26 @@
+<section>
+    <div class="layout-row">
+        <div class="interview__list">
+            <a ui-sref="home">&lt; Back to interview form</a>            
+            <ul ng-if="vm.interviewAvailability">
+                <li class="interview__list__item"
+                    ng-repeat="interview in vm.interviews">
+                    <a ui-sref="interview-list.details({id: interview.interview_id})">
+                        {{interview.interview_id}} 
+                        <span>({{interview.interview_date | date}})</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="flex interview__details">
+            <ui-view>
+
+            </ui-view>
+        </div>
+    </div>
+
+    <h2 ng-if="!vm.interviewAvailability">
+        No interview records available
+    </h2>
+</section>

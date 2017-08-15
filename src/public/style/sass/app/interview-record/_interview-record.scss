@@ -1,0 +1,78 @@
+.interview {
+    margin: 3.2rem 0;
+    &__form {
+        margin: 0 auto;
+
+        padding: 3.2rem;
+
+        max-width: 45rem;
+        background: map-deep-get($colors, 'list', 'dark-gray');
+
+        &__field {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__list {
+        position: fixed;
+
+        width: 24rem;
+        height: 100vh;
+        background: map-deep-get($colors, 'list', 'darkest-gray');
+
+        overflow: auto;
+
+        &__item {
+            border-bottom: 1px solid map-deep-get($colors, 'list', 'dark-gray');
+
+            font-size: 1.4rem;
+
+            &:hover {
+                background: map-deep-get($colors, 'list', 'dark-gray');
+            }
+
+            a {
+                padding: 0.8rem;
+
+                display: inline-block;
+            }
+        }
+
+        > {
+            a {
+                padding: 1.6rem 0.8rem 0 0.8rem;
+                display: inline-block;
+            }
+        }
+    }
+
+    &__details {
+        padding-top: 1.2rem;
+        padding-left: 13.5rem;
+
+        &__label {
+            font-size: 1.6rem;
+            font-weight: normal;
+        }
+
+        &__info {
+            margin-bottom: 1.6rem;
+
+            display: block;
+
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: map-deep-get($colors, 'list', 'grayish-white');
+        }
+
+        &__title {
+            margin-bottom: 2rem;
+
+            padding-bottom: 1.6rem;
+
+            font-size: 2rem;
+
+            border-bottom: 1px solid map-deep-get($colors, 'list', 'dark-gray');
+        }
+    }
+}
