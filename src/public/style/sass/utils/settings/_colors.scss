@@ -1,0 +1,40 @@
+/// @prop colors
+/// @author Sabbir Ahmed
+/// @access public
+$colors: (
+    'primary': (
+        'base': rgba(137, 93, 249, 0.64),
+        'base_hover':  #885BF9,
+        'dashboard-base': #dc7c53
+    ),
+
+    'secondary': (
+        'base': #4C191B
+    ),
+
+    'accent': (
+        'base': #ef7c52
+    ),
+
+    'list': (
+        'base': #fff,
+        'black': #000,
+        'light-black': #181818,
+        'medium-white': #fdfdfd,
+        'grayish-white': #aaa,
+        'dark-gray': #363636,
+        'darkest-gray': #222,
+        'orange': #f96816,
+        'red': #ea3939
+    )
+
+) !default;
+
+
+/// @prop colors
+/// @author Sabbir Ahmed
+/// @access public
+$colors-mix: (
+    'white-mix': #fff,
+    'black-mix': #000
+) !default;
