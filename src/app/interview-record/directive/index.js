@@ -1,1 +1,0 @@
-require('./interview-form-style.directive');
