@@ -20,10 +20,10 @@
         to: __dirname + '/dist'
     }]));
 
-    config.plugins.push(new CopyWebpackPlugin([{
-        from: __dirname + '/src/app/id-generator/view',
-        to: __dirname + '/dist/src/app/id-generator/view'
-    }]));
+    // config.plugins.push(new CopyWebpackPlugin([{
+    //     from: __dirname + '/src/app/id-generator/view',
+    //     to: __dirname + '/dist/src/app/id-generator/view'
+    // }]));
 
     config.plugins.push(new CopyWebpackPlugin([{
         from: __dirname + '/src/app/interview-record/view',

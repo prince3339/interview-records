@@ -17,7 +17,8 @@ module.exports = {
             __dirname + '/node_modules/angular',
             __dirname + '/node_modules/angular-messages',
             // __dirname + '/node_modules/angular-route',
-            __dirname + '/node_modules/@uirouter/angularjs'
+            __dirname + '/node_modules/@uirouter/angularjs',
+            __dirname + '/node_modules/angularjs-datetime-picker'
         ]
     },
     devtool: 'inline-source-map',

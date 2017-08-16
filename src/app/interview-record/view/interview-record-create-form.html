@@ -171,7 +171,7 @@
                     autocomplete="off" 
                     required>
             </div>
-            <div class="interview__form__field">
+             <div class="interview__form__field">
                 <div class="layout-row layout-align-space-between-start">
                     <label for="interview_date"
                            class="recordsure__form__label">Date</label>
@@ -180,14 +180,20 @@
                               ng-message="required">Required</span>
                     </span>
                 </div>
-                <input class="recordsure__form__fields" 
+                <!-- <input class="recordsure__form__fields" 
                     id="interview_date" 
                     type="date" 
                     name="interview_date" 
                     ng-model="vm.interview.interview_date" 
                     autocomplete="off" 
-                    required>
-            </div>
+                    required> -->
+                <input class="recordsure__form__fields" 
+                       datetime-picker 
+                       name="interview_date" 
+                       ng-model="vm.interview.interview_date"
+                       autocomplete="off" 
+                       required />
+            </div> 
             <div class="interview__form__field">
                 <div class="layout-row layout-align-space-between-start">
                     <label for="interview_id"
